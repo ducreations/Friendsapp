@@ -1,0 +1,26 @@
+<h1>Add Friend</h1>
+
+<%= form_for @friend do |f| %>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name, placeholder: "Mon Carlo", required: true %>
+  </div><br>
+  <div class="field">
+    <%= f.label :email_address %><br>
+    <%= f.text_field :email, placeholder: "monpogi@gmail.com", required: true %>
+  </div><br>
+  <div class="field">
+    <%= f.label :contact_number %><br>
+    <%= f.text_field :number, placeholder: "0987 654 3210", required: true %>
+  </div>
+  <div class="field">
+    <%= f.number_field :user_id, id: :friend_user_id, value: current_user.id, type: :hidden %>
+  </div><br>
+
+  <div class="actions">
+    <%= f.submit "Save & continue", class:"btn btn-primary" %>
+  </div>
+
+<% end %>
+
+<%= link_to "Cancel", friends_path, class:"btn btn-light" %>

@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Wish</th>
+      <th>Status</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @wishes.each do |wish| %>
+      <tr>
+        <td><%= wish.name %></td>
+        <td><%= wish.status? ? "Granted" : "Waiting" %></td>
+        <td><%= link_to "Delete", wish_path(wish), method: :delete, data: {confirm: "Are you sure?"} %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "Add wish", new_wish_path %>

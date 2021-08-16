@@ -1,0 +1,18 @@
+<h1>Enter your wish</h1>
+
+<%= form_for @wish do |f| %>
+  <div class="field">
+    <%= f.label :wish %><br>
+    <%= f.text_field :name, placeholder: "Birthday cake", required: true, autofocus: true %>
+  </div>
+  <div class="check box">
+    <%= f.check_box :status %> Is it Granted?
+  </div><br>
+
+  <div class="actions">
+    <%= f.submit "Add wish" %>
+  </div><br>
+
+  <%= link_to "Cancel", wishes_path %>
+
+<% end %>

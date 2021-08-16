@@ -1,11 +1,16 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+.navbar .navbar-brand {
+    color: dodgerblue;
+}
+
 .navbar .nav-item:hover .nav-link { 
-    border-radius: 5px 5px 5px 5px;
     color: dodgerblue;  
 }
 
 a {
   text-decoration: none;
+}
+
+.center {
+    text-align:center;
+    mrgin: 10px;
 }
