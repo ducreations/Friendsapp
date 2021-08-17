@@ -1,6 +1,6 @@
 class WishesController < ApplicationController
-  before_action :authenticate_user!, only: [:index]
   before_action :wish_id, only: [:destroy]
+
   def index
     @wishes = Wish.all
   end
@@ -12,7 +12,7 @@ class WishesController < ApplicationController
   def create
     @wish = Wish.new(wish_params)
     if @wish.save
-      redirect_to wishes_path
+      redirect_to wishes_path, notice: "Wish successfully added"
     else
       render :new
     end

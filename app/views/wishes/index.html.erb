@@ -1,9 +1,10 @@
-<table class="table">
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Wish</th>
       <th>Status</th>
-      <th></th>
+      <th>Wisher Id</th>
+      <th>Action</th>
     </tr>
   </thead>
   <tbody>
@@ -11,7 +12,8 @@
       <tr>
         <td><%= wish.name %></td>
         <td><%= wish.status? ? "Granted" : "Waiting" %></td>
-        <td><%= link_to "Delete", wish_path(wish), method: :delete, data: {confirm: "Are you sure?"} %></td>
+        <td><%= wish.user.email %></td>
+        <td><%= link_to "Delete", wish_path(wish), method: :delete, data: {confirm: "Sure?"} %></td>
       </tr>
     <% end %>
   </tbody>

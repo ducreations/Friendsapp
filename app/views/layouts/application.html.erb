@@ -21,6 +21,9 @@
     <% if alert %>
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
+    <% if user_signed_in? %>
+      <%= current_user.email %>
+    <% end %>
 
     <div class="container">
       <%= yield %>
