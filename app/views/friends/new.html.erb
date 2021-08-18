@@ -14,7 +14,7 @@
     <%= f.text_field :number, placeholder: "0987 654 3210", required: true %>
   </div>
   <div class="field">
-    <%= f.number_field :user_id, id: :friend_user_id, value: current_user.id, type: :hidden %>
+    <%= f.text_field :user_id, id: :friend_user_id, value: current_user.id, type: :hidden %>
   </div><br>
 
   <div class="actions">

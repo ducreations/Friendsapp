@@ -3,8 +3,7 @@
     <tr>
       <th>Wish</th>
       <th>Status</th>
-      <th>Wisher Id</th>
-      <th>Action</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -12,7 +11,6 @@
       <tr>
         <td><%= wish.name %></td>
         <td><%= wish.status? ? "Granted" : "Waiting" %></td>
-        <td><%= wish.user.email %></td>
         <td><%= link_to "Delete", wish_path(wish), method: :delete, data: {confirm: "Sure?"} %></td>
       </tr>
     <% end %>

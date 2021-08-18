@@ -1,6 +1,6 @@
 <h1>Popular articles by users</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Title</th>
@@ -11,7 +11,7 @@
   <tbody>
   <% @articles.each do |article| %>
       <tr>
-        <td><%= article.title %></td>
+        <td><%= link_to article.title, article_path(article) %></td>
         <td><%= article.author %></td>
         <td><%= article.headline %></td>
       </tr>
